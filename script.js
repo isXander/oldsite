@@ -4,9 +4,6 @@ $(document).ready(function() {
     if (doDownload === "1") download();
 });
 
-document.getElementById('download-btn').onclick = () => {
-        download();
-};
 
 function getURLParameter(url, name) {
     return (RegExp(name + '=' + '(.+?)(&|$)').exec(url)||[undefined,null])[1];
