@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xander Client Documentation</title>
+    <link
+            rel="icon"
+            type="image/png"
+            href="../images/favicon.png"
+            integrity="sha384-lsrqfF4BSO8R1hhFiQuVku4m3uHAd6tWtGR6hC19c7ZzLiMcOm4iZLb2WX5kw4ke"
+            crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../utils.css" />
+</head>
+<header>
+    <div class="nav-bar">
+        <a href="https://isxander.co.uk/">
+            <img src="../images/navbar-img.png" alt="logo" class="floaty logo"/>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="https://isxander.co.uk" class="floaty">Home</a></li>
+                <li><a href="https://isxander.co.uk/?download=1" class="floaty">Download</a></li>
+                <li><a href="https://discord.gg/BNv3qqT" class="floaty">Discord</a></li>
+                <li><a href="#" class="floaty">Documentation</a></li>
+                <li><a href="../" class="floaty">Back</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<body>
+    <div id="canvas"></div>
+    <div id="content">
+        <h3>Xander Client is a project maintained by isXander.<br>
+            It is a project dedicated to bringing the best, lag-free, experience to hypixel players.<br>
+            Many features are planned that no other clients offer.</h3>
+        <img
+                src="https://cdn.discordapp.com/attachments/752616946138218546/752990506539024524/2020-09-08_15.51.21.png"
+                alt="First cosmetic!"/>
+        <h3>Where can I get this?<br>
+        This client is currently in early alpha stages and has not yet been released to the public.<br><br>
+        What can I do to help the project?<br>
+            You could join the discord server or maybe even apply to <a href="https://forms.gle/Q6tnjxfK1v3RikLi8" target="_blank" style="text-decoration: none; color: aquamarine">become a developer!</a></h3>
+    </div>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="../particlesJS.min.js"></script>
+    <script>
+        particlesJS.load('canvas', 'particles.json');
+
+        update = function() {
+            requestAnimationFrame(update);
+        }
+        requestAnimationFrame(update);
+    </script>
+</body>
+</html>

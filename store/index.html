@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xander Client Store</title>
+    <link
+            rel="icon"
+            type="image/png"
+            href="../images/favicon.png"
+            integrity="sha384-lsrqfF4BSO8R1hhFiQuVku4m3uHAd6tWtGR6hC19c7ZzLiMcOm4iZLb2WX5kw4ke"
+            crossorigin="anonymous" />
+    <link
+            rel="stylesheet"
+            href="style.css" />
+</head>
+<body>
+    <div id="canvas"></div>
+    <h1 id="text">This page is currently under construction!</h1>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="../particlesJS.min.js"></script>
+    <script>
+        particlesJS.load('canvas', 'particles.json');
+
+        update = function() {
+            requestAnimationFrame(update);
+        }
+        requestAnimationFrame(update);
+    </script>
+</body>
+</html>
