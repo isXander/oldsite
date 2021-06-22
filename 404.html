@@ -2,6 +2,52 @@
 <html lang="en">
 <head>
     <title>Page Not Found</title>
-    <meta http-equiv="refresh" content="0; url=https://isxander.co.uk/404" />
+
+    <meta name="robots" content="noindex">
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+        body {
+            margin: 0;
+            font-family: "Fredoka One", cursive;
+
+            background-image: linear-gradient(to bottom right, red, blue);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            height: 100vh;
+
+            display: grid;
+            place-items: center;
+        }
+
+        h1 {
+            margin: 0;
+
+            font-size: clamp(90px, 20vw, 500px);
+            letter-spacing: 0.1em;
+            color: white;
+            text-align: center;
+            text-shadow: 10px 15px rgba(0, 0, 0, .5);
+
+            user-select: none;
+
+            top: -10px;
+            animation-name: textbob;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes textbob {
+            from { transform: translateY(-10px) }
+            to { transform: translateY(10px) }
+        }
+    </style>
 </head>
+<body>
+    <h1>404</h1>
+</body>
 </html>
