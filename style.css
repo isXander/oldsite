@@ -1,45 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url(https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap);.container {
-    padding: 0;
-    margin: 0 auto;
-}
-html {
-    height: 100%;
-    overflow-x: hidden;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 
 body {
-    position: relative;
-    overflow-x: hidden;
-    font-family: Nunito, sans-serif;
-    line-height: 1.5;
     margin: 0;
-    min-height: 100%;
-    box-sizing: border-box;
-    background-color: #eb434a;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    font-family: "Fredoka One", cursive;
+
+    background-image: linear-gradient(to bottom right, red, blue);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body.superCenter {
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
+}
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    grid-template-rows: repeat(4, max-content);
+    gap: min(3vmin, 1em);
+    align-items: center;
+}
+
+.logo-grid h1 {
+    grid-column: 1 / -1;
+
+    margin: 0 0 0.1em;
+
+    font-size: clamp(80px, 8vw, 160px);
+    letter-spacing: 0.1em;
+    color: white;
+    text-align: center;
+    text-shadow: 10px 15px rgba(0, 0, 0, 0.5);
+
     user-select: none;
+
+    animation-name: textbob;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
 }
 
-canvas {
-    position: fixed;
-    z-index: -1;
+
+.logo-grid img {
+    grid-area: 2 / 2 / span 3 / span 1;
+    place-self: center;
+
+    width: clamp(40px, 30vw, 600px);
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.logo-grid a {
+    padding: 1em;
+
+    border: 3px solid rgba(0, 0, 0, 0);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+
+    transition: ease-in-out 200ms;
+}
+
+.logo-grid a:hover {
+    transform: scale(1.5, 1.5) rotateZ(20deg);
+    /*border: 3px solid white;*/
+}
+
+#logo {
+    transition: ease-in-out 0.5s;
+}
+
+#logo:hover {
+    transform: scale(1.1, 1.1);
 }
 
 
-.centered {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -40%);
-    top: 40%;
-}
+@keyframes textbob {
+    from {
+        transform: translateY(-10px);
+    }
 
+    to {
+        transform: translateY(10px);
+    }
+}
