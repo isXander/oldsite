@@ -51,7 +51,11 @@ body.superCenter {
 
     width: clamp(40px, 30vw, 600px);
     height: auto;
+    
+    /* Chrome */
     image-rendering: pixelated;
+    /* Firefox */
+    image-rendering: crisp-edges;
 }
 
 .logo-grid a {
