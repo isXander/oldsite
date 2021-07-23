@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+html {
+    font-feature-settings: "lnum";
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: #dadada;
+}
+
+body {
+    margin: 0;
+    background-color: #303030;
+}
+
+.img-holder {
+    height: 100%;
+    position: relative;
+    transition: ease-in-out .5s;
+    padding: 0 0;
+}
+#logo-img {
+    height: 5vh;
+    padding: 0 0 0 5px;
+
+}
+.img-holder:hover {
+    transform: scale(1.1, 1.1);
+}
+
+header {
+    overflow: hidden;
+    background-color: #292929;
+    padding: 20px 10px;
+    position: relative;
+}
+
+header a {
+    float: left;
+    color: #dadada;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+header a:hover {
+    background-color: #ff4747;
+}
+
+header a.active {
+    background-color: #ff4747;
+    transition: ease-in-out .5s;
+    transform: rotateZ(3deg);
+}
+
+.header-right {
+    float: right;
+}
+
+#typewriter-title {
+    font-weight: 700;
+    font-size: 100px;
+    margin: 2.5%;
+}
+
+#icons {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 5vw;
+    align-items: center;
+    list-style-type: none;
+    padding: 0 0 0 0;
+    margin: 2.5%;
+}
+
+#icons > li {
+    width: 10px;
+    padding: 5px;
+}
+
+.icon-list-img {
+    height: 5vh;
+}
+
+@media screen and (max-width: 500px) {
+    header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    header a.active {
+        background-color: #ff4747;
+        transform: none;
+    }
+
+    .header-right {
+        float: none;
+    }
+
+    #typewriter-title {
+        font-weight: normal;
+        font-size: 50px;
+    }
+}
