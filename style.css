@@ -1,90 +1,97 @@
-@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+html {
+    font-feature-settings: "lnum";
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: #dadada;
+}
 
 body {
     margin: 0;
-    font-family: "Fredoka One", cursive;
-
-    background-image: linear-gradient(to bottom right, red, blue);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: #303030;
+    background: linear-gradient(114deg, #373737 40%, #303030 40%);
+    background-attachment: fixed;
 }
 
-body.superCenter {
-    height: 100vh;
-
-    display: grid;
-    place-items: center;
+.img-holder {
+    height: 100%;
+    position: relative;
+    transition: ease-in-out .5s;
+    padding: 0 0;
 }
 
-.logo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, max-content);
-    grid-template-rows: repeat(4, max-content);
-    gap: min(3vmin, 1em);
-    align-items: center;
+#logo-img {
+    height: 5vh;
+    padding: 0 0 0 5px;
+
 }
 
-.logo-grid h1 {
-    grid-column: 1 / -1;
-
-    margin: 0 0 0.1em;
-
-    font-size: clamp(80px, 8vw, 160px);
-    letter-spacing: 0.1em;
-    color: white;
-    text-align: center;
-    text-shadow: 10px 15px rgba(0, 0, 0, 0.5);
-
-    user-select: none;
-
-    animation-name: textbob;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-}
-
-
-.logo-grid img {
-    grid-area: 2 / 2 / span 3 / span 1;
-    place-self: center;
-
-    width: clamp(40px, 30vw, 600px);
-    height: auto;
-    image-rendering: pixelated;
-}
-
-.logo-grid a {
-    padding: 1em;
-
-    border: 3px solid rgba(0, 0, 0, 0);
-    color: white;
-    text-decoration: none;
-    text-align: center;
-
-    transition: ease-in-out 200ms;
-}
-
-.logo-grid a:hover {
-    transform: scale(1.5, 1.5) rotateZ(20deg);
-    /*border: 3px solid white;*/
-}
-
-#logo {
-    transition: ease-in-out 0.5s;
-}
-
-#logo:hover {
+.img-holder:hover {
     transform: scale(1.1, 1.1);
 }
 
+#header {
+    overflow: hidden;
+    padding: 10px 10px 10px 10px;
+    position: relative;
+}
 
-@keyframes textbob {
-    from {
-        transform: translateY(-10px);
+#header a {
+    float: left;
+    color: #dadada;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    transition: ease-in-out .2s;
+}
+
+#header a:hover {
+    color: #303030;
+    background-color: #ff4747;
+    transform: rotateZ(3deg);
+}
+
+.header-right {
+    float: right;
+}
+
+#dev-title {
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 10rem);
+    margin: 2.5%;
+}
+
+#icons {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 5vw;
+    align-items: center;
+    list-style-type: none;
+    margin: 2.5%;
+}
+
+#icons > li {
+    width: 10px;
+}
+
+.icon-list-img {
+    height: 5vh;
+}
+
+@media screen and (max-width: 500px) {
+    #header a {
+        float: none;
+        display: block;
+        text-align: left;
+        transition: none;
     }
 
-    to {
-        transform: translateY(10px);
+    .header-right {
+        float: none;
     }
 }

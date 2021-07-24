@@ -1,53 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Page Not Found</title>
+    <title>isXander</title>
+    <link rel="icon" href="https://dl.isxander.dev/logos/isxander/v2/normal.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="isXander's Website">
+    <link rel="apple-touch-icon" content="https://dl.isxander.dev/logos/isxander/v2/normal.png">
 
-    <meta name="robots" content="noindex">
+    <meta name="og:type" content="website">
+    <meta name="og:title" content="Xander's Website">
+    <meta name="og:description" content="A landing page for everything Xander.">
+    <meta name="og:url" content="https://www.isxander.dev">
+    <meta name="og:image" content="https://dl.isxander.dev/logos/isxander/v2/normal.png">
+    <meta name="theme-color" content="#ff4747">
 
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+    <link rel="stylesheet" href="./style.css">
 
-        body {
-            margin: 0;
-            font-family: "Fredoka One", cursive;
-
-            background-image: linear-gradient(to bottom right, red, blue);
-            background-repeat: no-repeat;
-            background-size: cover;
-
-            height: 100vh;
-
-            display: grid;
-            place-items: center;
-        }
-
-        h1 {
-            margin: 0;
-
-            font-size: clamp(90px, 20vw, 500px);
-            letter-spacing: 0.1em;
-            color: white;
-            text-align: center;
-            text-shadow: 10px 15px rgba(0, 0, 0, .5);
-
-            user-select: none;
-
-            top: -10px;
-            animation-name: textbob;
-            animation-duration: 1.5s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-            animation-timing-function: ease-in-out;
-        }
-
-        @keyframes textbob {
-            from { transform: translateY(-10px) }
-            to { transform: translateY(10px) }
-        }
-    </style>
+    <meta charset="UTF-8">
 </head>
 <body>
-    <h1>404</h1>
+<div id="header">
+    <a href="https://www.isxander.dev" class="img-holder"><img src="https://dl.isxander.dev/logos/isxander/v2/logo-name.svg" alt="" id="logo-img"></a>
+    <div class="header-right">
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a class="active" href="#about">About</a>
+    </div>
+</div>
+<div id="about">
+    <div id="dev-title">
+        <div id="typewriter-title"></div>
+        <p style="margin-top: 0">404</p>
+    </div>
+</div>
+
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<script type="text/javascript">
+    const instance = new Typewriter('#typewriter-title', {
+        cursor: '_'
+    });
+
+    instance
+        .typeString('Page Not Found')
+        .start();
+</script>
+
 </body>
 </html>
