@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    font-family: "Fira Code", monospace;
+    background-color: #181818;
+    color: #CCCCCC;
+}
+
+a {
+    color: #CCCCCC;
+    text-decoration: none;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5vw;
+    font-size: 5vw;
+    background-color: #0C0C0C;
+    border-radius: 0.5em;
+}
+
+.hello-emoticon {
+    color: #ff4747;
+    font-size: 20vw;
+    margin: 0;
+    padding: 5px 5vw 5px 5px;
+}
+
+.summary-text h3 {
+    margin-bottom: 0;
+}
+
+.summary-text p {
+    font-size: 2vw;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.coming-soon {
+    text-align: center;
+    font-size: 5vw;
+}
+
+.fa-3xs {
+    font-size:.5em;
+    line-height:.11667em;
+    vertical-align:.125em
+}
